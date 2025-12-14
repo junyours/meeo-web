@@ -1,0 +1,399 @@
+/* === Base Container === */
+.stall-report-container {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  padding: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  background: #f9fafb;
+  color: #36adca;
+}
+
+/* === Header === */
+.stall-report-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1e3a8a;
+}
+
+/* === Filters === */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 25px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+}
+
+.filters label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #374151;
+}
+
+.filters input,
+.filters select {
+  padding: 7px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #f9fafb;
+  font-size: 14px;
+  width: 180px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+}
+
+.filters button {
+  padding: 8px 18px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters button:hover {
+  background: #1d4ed8;
+}
+
+/* === Report Selector Buttons === */
+.report-selector {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.report-selector button {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.report-selector button.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.report-selector button:hover:not(.active) {
+  background: #e5e7eb;
+}
+
+/* === Report Section === */
+.report-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.report-section h2 {
+  color: #1e3a8a;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
+}
+
+/* === 🌟 CARD STYLE 3 - Modern Card-Based Table === */
+.report-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  background: transparent;
+}
+
+.report-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.report-table th {
+  background: transparent;
+  color: #374151;
+  font-weight: 700;
+  text-align: left;
+  padding: 12px 20px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+}
+
+.report-table tbody tr {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.report-table td {
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #1f2937;
+  border: none;
+}
+
+.report-table td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.report-table td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.report-table tbody tr:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* === ✨ Action Buttons in Table Rows === */
+.report-table button {
+  background: #2563eb;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.report-table button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* === 🔴 Missed Payment Variant (Red Theme) === */
+.report-section.missed-payment h2 {
+  color: #b91c1c;
+  border-left: 4px solid #dc2626;
+}
+
+.report-section.missed-payment .report-table th {
+  color: #991b1b;
+}
+
+.report-section.missed-payment tbody tr {
+  background: #fff5f5;
+  box-shadow: 0 3px 10px rgba(220, 38, 38, 0.05);
+  border-left: 4px solid rgba(220, 38, 38, 0.3);
+}
+
+.report-section.missed-payment tbody tr:hover {
+  transform: translateY(-4px);
+  background: #fee2e2;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.15);
+}
+
+.report-section.missed-payment .report-table button {
+  background: #dc2626;
+}
+
+.report-section.missed-payment .report-table button:hover {
+  background: #b91c1c;
+}
+
+/* === 🌈 Row Glow Animation for Active or Important Rows === */
+@keyframes glowRow {
+  from { box-shadow: 0 0 0 rgba(37, 99, 235, 0.4); }
+  to { box-shadow: 0 0 20px rgba(37, 99, 235, 0.25); }
+}
+
+.report-table tr.highlight {
+  animation: glowRow 1.5s ease-in-out infinite alternate;
+}
+
+/* === Modal Styling === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 24, 39, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 850px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2563eb;
+  color: white;
+  padding: 14px 18px;
+  font-weight: 600;
+}
+
+.modal-header button {
+  background: none;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+/* === Modal Table Styling === */
+.modal-body table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  background: transparent;
+}
+
+.modal-body thead th {
+  background: transparent;
+  color: #374151;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding: 10px 12px;
+  letter-spacing: 0.4px;
+  text-align: left;
+}
+
+.modal-body tbody tr {
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.modal-body td {
+  padding: 12px 12px;
+  font-size: 14px;
+  border: none;
+  color: #374151;
+}
+
+.modal-body td:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.modal-body td:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.modal-body tr:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.missed-dates-cell {
+  background: #fef2f2;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+}
+
+/* === Buttons inside modal === */
+.view-dates-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin-top: 0px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.view-dates-btn:hover {
+  background: #1e40af;
+}
+
+/* === Loading Text === */
+.loading {
+  text-align: center;
+  font-weight: 600;
+  color: #2563eb;
+  font-size: 16px;
+}
+.date-toggle-wrapper {
+  display: inline-flex;       /* inline-flex ensures date and arrow stay in one line */
+  align-items: center;        /* vertically center the arrow */
+  gap: 6px;                   /* space between date and arrow */
+}
+
+.first-date {
+  white-space: nowrap;        /* prevent date from breaking */
+}
+
+.toggle-arrow {
+  cursor: pointer;
+  font-size: 14px;
+  color: #2563eb;
+  transition: transform 0.25s ease;
+}
+
+.toggle-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.toggle-arrow:hover {
+  color: #1e40af;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+} 
+
+/* === Smooth slide animation for missed dates === */
+.dates-container {
+  max-height: 25px; /* height for single date */
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.dates-container.expanded {
+  max-height: 500px; /* enough height to show all dates */
+}

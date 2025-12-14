@@ -1,0 +1,226 @@
+/* ===== CONTAINER ===== */
+.report-container-modern {
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 40px;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+/* ===== HEADER ===== */
+.report-header-modern {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.report-main-title-modern {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1a237e;
+}
+.report-sub-title-modern {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ===== CHART SECTION ===== */
+.chart-section-modern {
+  background: white;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 45px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.chart-section-modern:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+.chart-title-modern {
+  text-align: center;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+/* ===== TOOLTIP ===== */
+.custom-tooltip {
+  background: rgba(26, 35, 126, 0.95);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== TABLE WRAPPER ===== */
+.table-wrapper-modern {
+  overflow-x: auto;
+}
+.report-table-modern {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  min-width: 950px;
+}
+.report-table-modern th,
+.report-table-modern td {
+  padding: 12px 15px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.report-table-modern th {
+  background: linear-gradient(135deg, #1a73e8, #1976d2);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+.report-table-modern tbody tr:hover {
+  background-color: #f1f5fb;
+}
+
+/* ===== MODULE NAME ===== */
+.module-name-modern {
+  font-weight: 600;
+  text-align: left;
+  color: #1a237e;
+}
+
+/* ===== INLINE EDITING ===== */
+.view-cell-modern,
+.edit-cell-modern {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.edit-cell-modern input {
+  width: 100px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.9rem;
+}
+.edit-cell-modern input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.3);
+}
+
+/* ===== BUTTONS ===== */
+.edit-btn-modern,
+.save-btn-modern,
+.cancel-btn-modern {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.edit-btn-modern {
+  background: #1a73e8;
+  color: #fff;
+}
+.edit-btn-modern:hover {
+  background: #1565c0;
+}
+.save-btn-modern {
+  background: #2e7d32;
+  color: #fff;
+}
+.save-btn-modern:hover {
+  background: #1b5e20;
+}
+.cancel-btn-modern {
+  background: #e53935;
+  color: #fff;
+}
+.cancel-btn-modern:hover {
+  background: #c62828;
+}
+
+/* ===== HIGHLIGHT ===== */
+.highlight-max-modern {
+  background: rgba(255, 235, 59, 0.25);
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* ===== TOTAL ROW ===== */
+.totals-row-modern {
+  font-weight: 600;
+  background-color: #e3f2fd;
+  color: #1a237e;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar-modern {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background: #e0e7ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill-modern {
+  height: 100%;
+  transition: width 0.6s ease-in-out;
+}
+.progress-fill-modern.green {
+  background-color: #2e7d32;
+}
+.progress-fill-modern.yellow {
+  background-color: #fbc02d;
+}
+.progress-fill-modern.red {
+  background-color: #e53935;
+}
+.progress-text-modern {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .report-container-modern {
+    padding: 25px;
+  }
+  .report-table-modern {
+    font-size: 0.9rem;
+  }
+  .progress-bar-modern {
+    height: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .report-container-modern {
+    margin: 20px;
+    padding: 15px;
+  }
+  .report-table-modern th,
+  .report-table-modern td {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+  .progress-bar-modern {
+    height: 14px;
+  }
+  .progress-text-modern {
+    font-size: 0.65rem;
+  }
+}

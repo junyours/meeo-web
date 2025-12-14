@@ -1,0 +1,134 @@
+.stall-grid {
+  margin-top: 20px;
+}
+
+.stall-row {
+  display: flex;
+}
+
+.stall-cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 2px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.stall-cell.vacant {
+  background-color: #06d50d;
+}
+
+.stall-cell.occupied {
+  background-color: #cd0909;
+}
+
+.stall-cell.empty {
+  background-color: #f1f1f1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+button[type="button"] {
+  background-color: #ccc;
+}
+
+
+.tenant-tooltip {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: 280px;
+  z-index: 1000;
+  position: absolute;
+}
+
+.tenant-tooltip button {
+  float: right;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 6px;
+}
+
+
+.stall-card {
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.stall-unpaid {
+  background: #fef6e4;
+  border: 2px solid #f4a261;
+}
+
+.stall-paid {
+  background: #e9fce9;
+  border: 2px solid #2a9d8f;
+  cursor: not-allowed;
+}
+
+.status-paid {
+  font-weight: bold;
+  color: #2a9d8f;
+}
+
+.status-unpaid {
+  font-weight: bold;
+  color: #e76f51;
+}

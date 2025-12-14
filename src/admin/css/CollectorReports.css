@@ -1,0 +1,223 @@
+/* ===== GENERAL ===== */
+.collector-reports-container {
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+}
+
+/* ===== HEADER ===== */
+.collector-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+.collector-header h1 {
+  font-size: 2.3rem;
+  color: #1a237e;
+  font-weight: 700;
+}
+.collector-header p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.collector-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; /* vertically align with button */
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.collector-controls label {
+  font-weight: 600;
+  color: #444;
+  margin-right: 4px;
+}
+.collector-controls select,
+.collector-controls input {
+  padding: 6px 10px; /* compact */
+  font-size: 0.88rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  min-width: 100px; /* smaller width */
+  max-width: 140px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.collector-controls select:focus,
+.collector-controls input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 4px rgba(26, 115, 232, 0.3);
+}
+
+
+.collector-controls button {
+  background: linear-gradient(to right, #1a73e8, #1976d2);
+  color: #fff;
+  padding: 8px 16px; /* slightly smaller */
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.collector-controls select option { padding: 6px 10px; }
+
+.collector-controls button:hover { opacity: 0.9; }
+
+/* ===== TABLE ===== */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.report-table th, .report-table td {
+  text-align: left;
+  padding: 12px 15px;
+}
+.report-table th {
+  background-color: #e3f2fd;
+  color: #1a237e;
+  font-weight: 600;
+}
+.report-table tr:hover {
+  background: #f5faff;
+}
+
+.date-filter-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: nowrap; /* prevent wrapping */
+  justify-content: flex-start;
+}
+
+.date-filter-controls label {
+  font-weight: 600;
+  margin-right: 5px;
+  white-space: nowrap; /* prevent label text from breaking */
+}
+
+.date-filter-controls input[type="date"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 120px
+}
+
+.date-filter-controls .view-btn {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.date-filter-controls .view-btn:hover {
+  background-color: #1565c0;
+}
+
+/* ===== BUTTONS ===== */
+.view-btn {
+  background: #2563eb;
+  border: none;
+  color: white;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+.view-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* ===== MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.adaptive-modal {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 95%;
+  max-height: 85vh;
+  overflow-y: auto;
+  transition: 0.3s ease;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 15px;
+}
+.modal-header h3 {
+  color: #1a237e;
+  font-weight: 600;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #777;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #e53935;
+}
+.section-title {
+  color: #1565c0;
+  font-weight: 600;
+  margin: 15px 0 8px;
+  font-size: 1.1rem;
+}
+.details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.details-table th, .details-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+.details-table th {
+  background: #f1f5fb;
+  color: #1a237e;
+  font-weight: 600;
+}
+.details-table tr:hover {
+  background: #f9fbff;
+}
+
+/* ===== STATUS COLORS ===== */
+.status.remitted { color: #2e7d32; font-weight: 600; }
+.status.pending { color: #ef6c00; font-weight: 600; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .adaptive-modal {
+    max-width: 95%;
+  }
+}
