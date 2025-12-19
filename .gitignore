@@ -21,3 +21,12 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+# Android build files (DO NOT COMMIT)
+*.apk
+*.aab
+
+# Old APK folders (never track again)
+public/Apk/
+public/apk/
