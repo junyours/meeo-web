@@ -178,7 +178,11 @@ const Homepage = () => {
             <p style={styles.aboutText}>
               Our MEEO mobile application is available for Vendors, Customers, Collectors, and Meat Inspectors. Download the APK to access real-time stall monitoring, collection tracking, vendor management, and inspection reporting directly on your mobile device.
             </p>
-            <a href="/apk/app-release.apk" download>
+            <a
+              href="https://drive.google.com/uc?export=download&id=11RwD7wp8NH_GDryr4tGFmYh4u-XNab1K"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button style={styles.downloadButton} icon={<DownloadOutlined />}>
                 Download APK
               </Button>
